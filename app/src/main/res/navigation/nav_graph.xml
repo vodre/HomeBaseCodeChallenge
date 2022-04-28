@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/shiftsFragment">
+
+    <fragment
+        android:id="@+id/shiftsFragment"
+        android:name="com.homebase.challenge.ui.shift.ShiftsFragment"
+        android:label="shifts"
+        tools:layout="@layout/shifts_fragment" />
+
+    <fragment
+        android:id="@+id/addShiftFragment"
+        android:name="com.homebase.challenge.ui.add.AddShiftFragment"
+        android:label="add shift"
+        tools:layout="@layout/add_shift_fragment" />
+
+</navigation>

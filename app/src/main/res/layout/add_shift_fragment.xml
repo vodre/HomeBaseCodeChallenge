@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/spacing_big"
+    tools:context=".ui.add.AddShiftFragment">
+
+    <TextView
+        android:id="@+id/start_date_label"
+        android:layout_width="@dimen/date_label_size"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/vertical_spacing_large"
+        android:text="@string/start_date"
+        app:layout_constraintEnd_toStartOf="@+id/start_date"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/start_date"
+        android:layout_width="@dimen/date_input_size"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/horizontal_spacing_small"
+        android:layout_marginTop="@dimen/vertical_spacing_large"
+        android:gravity="center"
+        app:layout_constraintEnd_toStartOf="@+id/start_date_calendar"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/start_date_label"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Mon, April 12 9-2 PM" />
+
+    <TextView
+        android:id="@+id/end_date_label"
+        android:layout_width="@dimen/date_label_size"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/vertical_spacing_large"
+        android:text="@string/end_date"
+        app:layout_constraintEnd_toStartOf="@+id/end_date"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/start_date_label" />
+
+    <TextView
+        android:id="@+id/end_date"
+        android:layout_width="@dimen/date_input_size"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/horizontal_spacing_small"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="@+id/end_date_label"
+        app:layout_constraintEnd_toStartOf="@+id/end_date_calendar"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/end_date_label"
+        tools:text="Mon, April 12 9-2 PM" />
+
+    <ImageView
+        android:id="@+id/start_date_calendar"
+        android:layout_width="@dimen/calendar_icon_size"
+        android:layout_height="@dimen/calendar_icon_size"
+        android:layout_marginStart="@dimen/horizontal_spacing_small"
+        android:src="@drawable/ic_calendar"
+        app:layout_constraintBottom_toBottomOf="@+id/start_date"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/start_date"
+        app:layout_constraintTop_toTopOf="@+id/start_date"
+        app:tint="@color/brown_200" />
+
+    <ImageView
+        android:id="@+id/end_date_calendar"
+        android:layout_width="@dimen/calendar_icon_size"
+        android:layout_height="@dimen/calendar_icon_size"
+        android:layout_marginStart="@dimen/horizontal_spacing_small"
+        android:src="@drawable/ic_calendar"
+        app:layout_constraintBottom_toBottomOf="@+id/end_date"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/end_date"
+        app:layout_constraintTop_toTopOf="@+id/end_date"
+        app:tint="@color/brown_200" />
+
+    <TextView
+        android:id="@+id/employee_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/vertical_spacing_huge"
+        app:layout_constraintTop_toBottomOf="@+id/end_date_label"
+        app:layout_constraintStart_toStartOf="parent"
+        style="@style/TextAppearance.AppCompat.Title"
+        android:text="@string/employee" />
+
+    <Spinner
+        android:id="@+id/spinner_employees"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="@dimen/vertical_spacing_normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/employee_label" />
+
+    <TextView
+        android:id="@+id/roles_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/vertical_spacing_normal"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_employees"
+        app:layout_constraintStart_toStartOf="parent"
+        style="@style/TextAppearance.AppCompat.Title"
+        android:text="@string/roles" />
+
+    <Spinner
+        android:id="@+id/spinner_roles"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/vertical_spacing_normal"
+        style="@style/TextAppearance.AppCompat.Widget.PopupMenu.Header"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/roles_label" />
+
+    <TextView
+        android:id="@+id/colors_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/vertical_spacing_normal"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_roles"
+        app:layout_constraintStart_toStartOf="parent"
+        style="@style/TextAppearance.AppCompat.Title"
+        android:text="@string/colors" />
+
+    <Spinner
+        android:id="@+id/spinner_colors"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/vertical_spacing_normal"
+        android:gravity="center_horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/colors_label" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/save_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/save"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Coffee Co Shifts</string>
+    <string name="start_date">Start date:</string>
+    <string name="end_date">End date:</string>
+    <string name="save">Save</string>
+    <string name="employee">Employee:</string>
+    <string name="roles">Roles:</string>
+    <string name="colors">Colors:</string>
+    <string name="select_date">Select a Date</string>
+</resources>
